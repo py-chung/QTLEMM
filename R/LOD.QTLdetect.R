@@ -103,7 +103,7 @@ LOD.QTLdetect <- function(LOD, bin, thre = 3, QTLdist = 20, console = TRUE){
   det <- matrix(0, nt, ns)
   if(console){cat("step", "\t", "process", "\n")}
   cons0 <- 100
-  if(nrow(LOD) < 200){cons0 <- 10}
+  if(nrow(LOD) < 500){cons0 <- 10}
   for(j in 1:nt){
     if(console){
       if(j%%cons0 == 0 | j == nt){
@@ -170,7 +170,7 @@ LOD.QTLdetect <- function(LOD, bin, thre = 3, QTLdist = 20, console = TRUE){
   EQF <- matrix(0, nt, ns)
   cat("step", "\t", "process", "\n")
   for(i in 1:nt){
-    if(i%%50 == 0 | i == nt){
+    if(i%%cons0 == 0 | i == nt){
       cat("EQF caculating", paste(i, nt, sep = "/"), "\n", sep = "\t")
     }
     QTL <- det[i,]
@@ -201,6 +201,9 @@ LOD.QTLdetect <- function(LOD, bin, thre = 3, QTLdist = 20, console = TRUE){
         if(ci0 <= length(QTLci3)){ci2 <- QTLci3[ci0]-1}
         sdi <- ((ci2-ci1)/(2*1.96))
         k1 <- stats::pnorm((1:n)+0.5, pii, sdi)-stats::pnorm((1:n)-0.5, pii, sdi)
+        if(length(k1) == 0){
+          k1 <- 0
+        }
         k0 <- k0+k1
       }
       ka <- c(ka, k0)

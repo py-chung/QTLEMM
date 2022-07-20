@@ -105,6 +105,9 @@ EQF.permu <- function(LOD.QTLdetect.result, ptime = 1000, alpha = 0.05, Q = TRUE
     peqf <- c()
     clu.eqf1 <- apply(clu.eqf, 2, sum)
     peqf <- c(peqf, which.max(clu.eqf1))
+    if(max(clu.eqf1) == 0){
+      break
+    }
     group <- which(clu.det[, peqf] == 1)
     if(length(group) == 0){
       clu.eqf[, peqf] <- 0
