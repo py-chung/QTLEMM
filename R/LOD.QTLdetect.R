@@ -102,12 +102,12 @@ LOD.QTLdetect <- function(LOD, bin, thre = 3, QTLdist = 20, console = TRUE){
 
   det <- matrix(0, nt, ns)
   if(console){cat("step", "\t", "process", "\n")}
-  cons0 <- 100
-  if(nrow(LOD) < 500){cons0 <- 10}
+  t0 <- Sys.time()
   for(j in 1:nt){
     if(console){
-      if(j%%cons0 == 0 | j == nt){
+      if(Sys.time()-t0 > 1 | j == nt){
         cat("detect", paste(j, nt, sep = "/"), "\n", sep = "\t")
+        t0 <- Sys.time()
       }
     }
 
@@ -153,10 +153,12 @@ LOD.QTLdetect <- function(LOD, bin, thre = 3, QTLdist = 20, console = TRUE){
 
   link <- matrix(0, nt, nc)
   if(console){cat("step", "\t", "process", "\n")}
+  t0 <- Sys.time()
   for(j in 1:nt){
     if(console){
-      if(j%%cons0 == 0 | j == nt){
+      if(Sys.time()-t0 > 1 | j == nt){
         cat("linkage", paste(j, nt, sep = "/"), "\n", sep = "\t")
+        t0 <- Sys.time()
       }
     }
     for(i in 1:nc){
@@ -169,9 +171,13 @@ LOD.QTLdetect <- function(LOD, bin, thre = 3, QTLdist = 20, console = TRUE){
 
   EQF <- matrix(0, nt, ns)
   cat("step", "\t", "process", "\n")
+  t0 <- Sys.time()
   for(i in 1:nt){
-    if(i%%cons0 == 0 | i == nt){
-      cat("EQF caculating", paste(i, nt, sep = "/"), "\n", sep = "\t")
+    if(console){
+      if(Sys.time()-t0 > 1 | i == nt){
+        cat("EQF caculating", paste(i, nt, sep = "/"), "\n", sep = "\t")
+        t0 <- Sys.time()
+      }
     }
     QTL <- det[i,]
     if(!1 %in% QTL){next}
