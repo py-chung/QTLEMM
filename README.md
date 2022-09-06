@@ -22,5 +22,23 @@ install.packages("QTLEMM")
 + `progeny()` Generate the simulated phenotype and genotype data.
 + `D.make()` Generate the genetic design matrix. 
 + `Q.make()` Generate the conditional probability matrix. 
++ `LRTthre()` LRT threshold for QTL interval mapping.
 + `IM.search()` QTL interval mapping to search the possible position of QTL in all chromosome. 
-+ `IM.search2()`  QTL interval mapping for seletive genotyping data. 
++ `IM.search2()` QTL interval mapping to search the possible position of QTL in all chromosome with selective genotyping. 
++ `EM.MIM()` EM algorithm for QTL multiple interval mapping.
++ `EM.MIM2()` EM algorithm for QTL multiple interval mapping with selective genotyping.
++ `MIM.search()` EM algorithm for QTL multiple interval mapping to find one more QTL by known QTLs.
++ `MIM.search2()` EM algorithm for QTL multiple interval mapping to find one more QTL by known QTLs with selective genotyping.
++ `MIM.points()` EM algorithm for QTL multiple interval mapping to find the best QTL position near the designated QTL position.
++ `MIM.points2()` EM algorithm for QTL multiple interval mapping to find the best QTL position near the designated QTL position with selective genotyping.
++ `LOD.QTLdetect()` Detect QTL by likelihood of odds(LOD) matrix.
++ `EQF.permu()` The EQF matrix cluster permutation process for QTL hotspot detection.
++ `EQF.plot()` Depict the EQF plot by the result of permutation process to detect the QTL hotspot.
+
+
+
+
+
+
+
+
