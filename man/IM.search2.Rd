@@ -2,7 +2,7 @@
 % Please edit documentation in R/IM.search2.R
 \name{IM.search2}
 \alias{IM.search2}
-\title{QTL search by IM with Seletive Genotyping}
+\title{QTL search by IM with Selective Genotyping}
 \usage{
 IM.search2(
   marker,
@@ -139,8 +139,8 @@ Graphical outputs including LOD value and effect of each position.
 }
 \description{
 Expectation-maximization algorithm for QTL interval mapping to search
-the possible position of QTL in all chromosome. This funtion can
-handle the genotype witch is seletive genotyping.
+the possible position of QTL in all chromosome. This function can
+handle the genotype data witch is selective genotyping.
 }
 \examples{
 # load the example data
