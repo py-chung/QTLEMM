@@ -34,7 +34,25 @@ install.packages("QTLEMM")
 + `LOD.QTLdetect()` Detect QTL by likelihood of odds(LOD) matrix.
 + `EQF.permu()` The EQF matrix cluster permutation process for QTL hotspot detection.
 + `EQF.plot()` Depict the EQF plot by the result of permutation process to detect the QTL hotspot.
-
+  
+## Example dataset
+  
+The example dataset is provided for performing hotspot detection by cluster permutation process. The LOD matrix of yeast data ([(Brem and
+Kruglyak 2005)](https://www.pnas.org/doi/full/10.1073/pnas.0408709102)) is divided into four parts. The data can be downloaded from GitHub and combined into a complete matrix for use by the following command:
+  
+```yeast.LOD
+load(url("https://github.com/py-chung/QTLEMM/raw/main/inst/extdata/yeast.LOD.1.RDATA"))
+load(url("https://github.com/py-chung/QTLEMM/raw/main/inst/extdata/yeast.LOD.2.RDATA"))
+load(url("https://github.com/py-chung/QTLEMM/raw/main/inst/extdata/yeast.LOD.3.RDATA"))
+load(url("https://github.com/py-chung/QTLEMM/raw/main/inst/extdata/yeast.LOD.4.RDATA"))
+yeast.LOD <- rbind(yeast.LOD.1,yeast.LOD.2,yeast.LOD.3,yeast.LOD.4)
+```
+  
+And the imformation of bins of the LOD matrix can be downloaded from GitHub by the following command:
+  
+```yeast.LOD.bin
+load(url("https://github.com/py-chung/QTLEMM/raw/main/inst/extdata/yeast.LOD.bin.RDATA"))
+```
 
 
 
