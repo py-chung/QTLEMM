@@ -31,11 +31,13 @@ Description:
     hotspot detection analysis is based on the method by Wu, P.-Y., M.-.H. Yang, and C.-H.
     Kao (2021) .
 Imports: mvtnorm, utils, stats, graphics, grDevices
+URL: https://github.com/py-chung/QTLEMM
+BugReports: https://github.com/py-chung/QTLEMM/issues
 License: GPL-2
 Encoding: UTF-8
 RoxygenNote: 7.2.0
 NeedsCompilation: no
-Packaged: 2022-09-06 08:29:36 UTC; pingyuan
+Packaged: 2022-09-07 07:41:52 UTC; pingyuan
 Author: Ping-Yuan Chung [cre],
   Chen-Hung Kao [aut]
 Maintainer: Ping-Yuan Chung <pychung@webmail.stat.sinica.edu.tw>
