@@ -36,7 +36,7 @@ install.packages("QTLEMM")
 + `EQF.plot()` Depict the EQF plot by the result of permutation process to detect the QTL hotspot.
   
 More information can be seen in the following file:  
-[Package ‘IPLGP’](https://cran.r-project.org/web/packages/QTLEMM/QTLEMM.pdf)
+[Package ‘QTLEMM’](https://cran.r-project.org/web/packages/QTLEMM/QTLEMM.pdf)
   
 ## Example dataset
   
