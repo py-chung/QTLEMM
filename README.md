@@ -35,6 +35,9 @@ install.packages("QTLEMM")
 + `EQF.permu()` The EQF matrix cluster permutation process for QTL hotspot detection.
 + `EQF.plot()` Depict the EQF plot by the result of permutation process to detect the QTL hotspot.
   
+More information can be seen in the following file:  
+[Package ‘IPLGP’](https://cran.r-project.org/web/packages/QTLEMM/QTLEMM.pdf)
+  
 ## Example dataset
   
 The example dataset is provided for performing hotspot detection by cluster permutation process. The LOD matrix of yeast data ([(Brem and
