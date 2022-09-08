@@ -53,8 +53,7 @@ recommended to save the result in PDF file by the argument "save.pdf".
 load(system.file("extdata", "QHOTexample.RDATA", package = "QTLEMM"))
 
 # run and result
-result <- Qhot(QTL.example, crop.example, 5, 15, 80, save.pdf = FALSE)
-result$Expected.QTL.frequency.in.every.bin$`Chr 1`[1:10,]
+result <- Qhot(QTL.example, crop.example, 5, 20, 100, save.pdf = FALSE)
 }
 \references{
 Wu, P.-Y., M.-.H. Yang, and C.-H. KAO 2021 A Statistical Framework

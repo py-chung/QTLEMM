@@ -47,8 +47,7 @@
 #' load(system.file("extdata", "QHOTexample.RDATA", package = "QTLEMM"))
 #'
 #' # run and result
-#' result <- Qhot(QTL.example, crop.example, 5, 15, 80, save.pdf = FALSE)
-#' result$Expected.QTL.frequency.in.every.bin$`Chr 1`[1:10,]
+#' result <- Qhot(QTL.example, crop.example, 5, 20, 100, save.pdf = FALSE)
 Qhot <- function(DataQTL, DataCrop, ScanStep = 1, NH = 100, NP = 1000, save.pdf = TRUE){
   DataQTL <- data.frame(DataQTL)
   if(ncol(DataQTL) != 5 | TRUE %in% is.na(DataQTL)){
@@ -250,9 +249,6 @@ Qhot <- function(DataQTL, DataCrop, ScanStep = 1, NH = 100, NP = 1000, save.pdf 
   TableH2 <- matrix(TableH, byrow = FALSE, nrow = (NH+1))
 
   Ymax <- max(DataF.P2[, 1])
-
-  #windows(7,5,record=TRUE)
-  #graphics::par(mar=rep(0.1,4))
 
   x1 <- max(ChrL)*(-0.05)
   x2 <- max(ChrL)*1.1
@@ -477,7 +473,6 @@ Qhot <- function(DataQTL, DataCrop, ScanStep = 1, NH = 100, NP = 1000, save.pdf 
     }
   }
 
-
   graphics::layout(matrix(c(1, 2), 1, 2, byrow = TRUE), width = c(1, 1))
 
   plot(0, 1, type = "n", bty = 'n', xaxt = "n", yaxt = "n", main = " ", xlab = " ", ylab = " ")
@@ -485,13 +480,10 @@ Qhot <- function(DataQTL, DataCrop, ScanStep = 1, NH = 100, NP = 1000, save.pdf 
   Na.legd <- c(paste("Proposed method n= ", NH, sep = ""), "Q method" )
   graphics::legend("left", Na.legd, pch = 20, col = color, bty = "n")
 
-
-
   plot(0, 1, type = "n", bty = 'n', xaxt = "n", yaxt = "n", main = " ", xlab = " ", ylab = " ")
 
   Na.legd <- graphics::legend("left", Na.trait, pch = 1:N.trait, lty=1:N.trait,
                   col = grDevices::rainbow(N.trait, start = 0.1, end = 0.9, v = 0.8)[1:N.trait], bty = "n")
-
 
   names(DataF) <- paste("Chr", Na.chr, sep = " ")
   names(TV.P2) <- paste("n= ", 1:NH, sep = "")
