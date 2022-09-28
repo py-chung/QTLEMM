@@ -373,7 +373,7 @@ EM.MIM2 <- function(QTL, marker, geno, D.matrix, cp.matrix = NULL, y, yu = NULL,
       parameter <- c(mut1, Et1, sigt1)
 
       y.hat <- PI%*%D.matrix%*%Et1+X%*%mut1
-      r2 <- stats::var(y.hat)/stats::var(y)
+      r2 <- 1-stats::var(y-y.hat)/stats::var(y)
 
       Et1 <- parameter[2:(1+ncol(D.matrix))]
       mut1 <- parameter[1]
@@ -588,8 +588,8 @@ EM.MIM2 <- function(QTL, marker, geno, D.matrix, cp.matrix = NULL, y, yu = NULL,
                     E.vector = E.vector, X = X, beta = beta, variance = variance,
                     cp.matrix = cp.matrix, conv = conv, console = console)
     model <- "proposed model of selective genotyping"
-    result[[9]] <- model
-    names(result)[9] <- "model"
+    result[[12]] <- model
+    names(result)[12] <- "model"
   } else if (sele.g == "f"){
     if(nQTL > 1){QTL <- QTL[order(QTL[, 1], QTL[, 2]),]}
     marker <- marker[order(marker[, 1], marker[, 2]),]
@@ -722,7 +722,7 @@ EM.MIM2 <- function(QTL, marker, geno, D.matrix, cp.matrix = NULL, y, yu = NULL,
       colnames(Pi) <- colnames(mp)
 
       y.hat <- Pi%*%D.matrix%*%Et1+X%*%mut1
-      r2 <- stats::var(y.hat)/stats::var(ys)
+      r2 <- 1-stats::var(ys-y.hat)/stats::var(ys)
 
       output <- list(QTL = QTL, E.vector = Et1, beta = mut1, variance = sigt1, PI.matrix = Pi,
                      log.likelihood = like1, LRT = LRT, R2 = r2, y.hat = y.hat, yu.hat = NULL,
