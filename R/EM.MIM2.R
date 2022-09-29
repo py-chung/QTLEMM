@@ -373,7 +373,7 @@ EM.MIM2 <- function(QTL, marker, geno, D.matrix, cp.matrix = NULL, y, yu = NULL,
       parameter <- c(mut1, Et1, sigt1)
 
       y.hat <- PI%*%D.matrix%*%Et1+X%*%mut1
-      r2 <- 1-stats::var(y-y.hat)/stats::var(y)
+      r2 <- stats::var(y.hat)/stats::var(y)
 
       Et1 <- parameter[2:(1+ncol(D.matrix))]
       mut1 <- parameter[1]
@@ -722,7 +722,7 @@ EM.MIM2 <- function(QTL, marker, geno, D.matrix, cp.matrix = NULL, y, yu = NULL,
       colnames(Pi) <- colnames(mp)
 
       y.hat <- Pi%*%D.matrix%*%Et1+X%*%mut1
-      r2 <- 1-stats::var(ys-y.hat)/stats::var(ys)
+      r2 <- stats::var(y.hat)/stats::var(ys)
 
       output <- list(QTL = QTL, E.vector = Et1, beta = mut1, variance = sigt1, PI.matrix = Pi,
                      log.likelihood = like1, LRT = LRT, R2 = r2, y.hat = y.hat, yu.hat = NULL,

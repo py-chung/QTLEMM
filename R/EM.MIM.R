@@ -231,7 +231,7 @@ EM.MIM <- function(D.matrix, cp.matrix, y, E.vector0 = NULL, X = NULL,
   like1 <- sum(log(L1))
   LRT <- 2*(like1-like0)
   y.hat <- PI.matrix%*%D.matrix%*%E.vector+X%*%beta
-  r2 <- 1-stats::var(y-y.hat)/stats::var(y)
+  r2 <- stats::var(y.hat)/stats::var(y)
 
   if(time == 1000){
     E.vector <- rep(0, length(E.vector))
