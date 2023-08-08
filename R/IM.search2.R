@@ -525,8 +525,10 @@ IM.search2 <- function(marker, geno, y, yu = NULL, sele.g = "n", tL = NULL, tR =
     detect.QTL <- detectQTL(effect, LRT.threshold, QTLdist)
   }
 
-  oldpar <- graphics::par(no.readonly = TRUE)
-  on.exit(graphics::par(oldpar))
+  if(plot.chr | plot.all){
+    oldpar <- graphics::par(no.readonly = TRUE)
+    on.exit(graphics::par(oldpar))
+  }
 
   nc0 <- length(cr0)
   if(plot.chr | (nc0 == 1 & plot.all)){
