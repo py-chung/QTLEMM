@@ -1,7 +1,7 @@
 Package: QTLEMM
 Type: Package
 Title: QTL Mapping and Hotspots Detection
-Version: 1.4.0
+Version: 1.5.0
 Authors@R: c(
     person("Ping-Yuan", "Chung", email = "pychung@webmail.stat.sinica.edu.tw", role = "cre"),
     person("Chen-Hung", "Kao", email = "chkao@webmail.stat.sinica.edu.tw", role = "aut"),
@@ -36,14 +36,14 @@ Description:
     H.-A. Ho and C.-H. Kao (2014) <doi: 10.1534/genetics.114.168385>, respectively. The QTL 
     hotspot detection analysis is based on the method by Wu, P.-Y., M.-.H. Yang, and C.-H.
     Kao (2021) <doi: 10.1093/g3journal/jkab056>.
-Imports: mvtnorm, utils, stats, graphics, grDevices
+Imports: mvtnorm, utils, stats, graphics, grDevices, gtools
 URL: https://github.com/py-chung/QTLEMM
 BugReports: https://github.com/py-chung/QTLEMM/issues
 License: GPL-2
 Encoding: UTF-8
 RoxygenNote: 7.2.3
 NeedsCompilation: no
-Packaged: 2023-10-13 08:14:24 UTC; pingyuan
+Packaged: 2024-01-22 10:00:33 UTC; pingyuan
 Author: Ping-Yuan Chung [cre],
   Chen-Hung Kao [aut],
   Y.-T. Guo [aut],
