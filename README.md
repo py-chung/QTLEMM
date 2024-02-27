@@ -41,8 +41,8 @@ More information can be seen in the following file:
   
 ## Example dataset
   
-The example dataset is provided for performing hotspot detection by cluster permutation process. The LOD matrix of yeast data ([Brem and
-Kruglyak 2005](https://www.pnas.org/doi/full/10.1073/pnas.0408709102)) is divided into four parts. The data can be downloaded from GitHub and combined into a complete matrix for use by the following command:
+An example dataset is provided for performing hotspot detection through a cluster permutation process. The LOD matrix of the yeast data ([Brem and
+Kruglyak 2005](https://www.pnas.org/doi/full/10.1073/pnas.0408709102)) is divided into four parts. User can download the data from GitHub and combine it into a complete matrix for use with the following command:
   
 ```yeast.LOD
 load(url("https://github.com/py-chung/QTLEMM/raw/main/inst/extdata/yeast.LOD.1.RDATA"))
