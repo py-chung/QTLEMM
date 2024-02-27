@@ -26,15 +26,15 @@ install.packages("QTLEMM")
 + `IM.search()` QTL interval mapping to search the possible position of QTL in all chromosome. 
 + `IM.search2()` QTL interval mapping to search the possible position of QTL in all chromosome with selective genotyping. 
 + `EM.MIM()` EM algorithm for QTL multiple interval mapping.
-+ `EM.MIM2()` EM algorithm for QTL multiple interval mapping with selective genotyping.
++ `EM.MIM2()` EM algorithm for QTL multiple interval mapping with selective genotyping data.
 + `EM.MIMv()` EM algorithm for QTL multiple interval mapping and obtain the asymptotic variance-covariance matrix.
 + `MIM.search()` EM algorithm for QTL multiple interval mapping to find one more QTL by known QTLs.
 + `MIM.search2()` EM algorithm for QTL multiple interval mapping to find one more QTL by known QTLs with selective genotyping.
 + `MIM.points()` EM algorithm for QTL multiple interval mapping to find the best QTL position near the designated QTL position.
 + `MIM.points2()` EM algorithm for QTL multiple interval mapping to find the best QTL position near the designated QTL position with selective genotyping.
-+ `LOD.QTLdetect()` Detect QTL by likelihood of odds(LOD) matrix.
++ `LOD.QTLdetect()` Detect QTL by likelihood of odds (LOD) matrix.
 + `EQF.permu()` The EQF matrix cluster permutation process for QTL hotspot detection.
-+ `EQF.plot()` Depict the EQF plot by the result of permutation process to detect the QTL hotspot.
++ `EQF.plot()` Generate an EQF plot based on the result of the permutation process used to detect the QTL hotspot.
   
 More information can be seen in the following file:  
 [Package ‘QTLEMM’](https://cran.r-project.org/web/packages/QTLEMM/QTLEMM.pdf)
