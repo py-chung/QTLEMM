@@ -58,6 +58,11 @@ And the imformation of bins of the LOD matrix can be downloaded from GitHub by t
 load(url("https://github.com/py-chung/QTLEMM/raw/main/inst/extdata/yeast.LOD.bin.RDATA"))
 ```
 
+## Citing this package
+  
+Citing this package If you use IPL in your research, we would appreciate your citation by the following doi.
+
+[![DOI](https://zenodo.org/badge/515874009.svg)](https://zenodo.org/doi/10.5281/zenodo.10851952)
 
 
 
